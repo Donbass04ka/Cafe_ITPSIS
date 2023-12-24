@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace CafeWpfApp
+{
+    public partial class Post
+    {
+        public Post()
+        {
+            Users = new HashSet<User>();
+        }
+
+        public int Id { get; set; }
+        public string? Title { get; set; }
+
+        public virtual ICollection<User> Users { get; set; }
+    }
+}
